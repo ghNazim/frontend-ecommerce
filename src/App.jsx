@@ -1,7 +1,9 @@
-import './App.css'
+
 import { Button } from './components/ui/button'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment,incrementByAmount } from './store/counterSlice/counterSlice'
+import Login from './pages/auth/login'
+import Signup from './pages/auth/signup'
 function App() {
   const count = useSelector((state)=>state.counter.value)
   const dispatch = useDispatch()
@@ -18,6 +20,7 @@ function App() {
        <Button variant='secondary' onClick={()=>dispatch(incrementByAmount(5))}>
         + increment by 5
        </Button>
+       <Signup/>
        
     </>
   )
